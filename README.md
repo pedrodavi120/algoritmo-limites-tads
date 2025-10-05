@@ -23,10 +23,10 @@ O algoritmo foi estruturado na função analisar\_limite(funcao\_str, ponto\_str
 
 ### **Código-Fonte Completo**
 
-\# \-\*- coding: utf-8 \-\*-  
-from sympy import sympify, limit, Symbol, oo, S
+    \# \-\*- coding: utf-8 \-\*-  
+    from sympy import sympify, limit, Symbol, oo, S
 
-def analisar\_limite(funcao\_str, ponto\_str):  
+    def analisar\_limite(funcao\_str, ponto\_str):  
     """  
     Realiza a análise completa do limite de uma função em um determinado ponto.  
     """  
@@ -92,11 +92,11 @@ A seguir, são apresentados os resultados da execução do script para diferente
 
 **Saída:**
 
-\--- Exemplo 1: Substituição Direta \---  
-Análise do Limite de f(x) \= x\*\*2 \+ 3\*x \- 1 quando x \-\> 2  
-\--------------------------------------------------  
-1\. Substituição direta: f(2) \= 9  
-   \-\> O valor é definido e finito. O limite é o próprio valor.
+    \--- Exemplo 1: Substituição Direta \---  
+    Análise do Limite de f(x) \= x\*\*2 \+ 3\*x \- 1 quando x \-\> 2  
+    \--------------------------------------------------  
+    1\. Substituição direta: f(2) \= 9  
+    \-\> O valor é definido e finito. O limite é o próprio valor.
 
 Resultado Final: O limite é 9\.
 
@@ -107,20 +107,20 @@ Resultado Final: O limite é 9\.
 
 **Saída:**
 
-\--- Exemplo 2: Indeterminação 0/0 \---  
-Análise do Limite de f(x) \= (x\*\*2 \- 4)/(x \- 2\) quando x \-\> 2  
-\--------------------------------------------------  
-1\. Substituição direta: f(2) \= nan  
-   \-\> Resultado é uma forma indeterminada (ex: 0/0, oo/oo).  
-   \-\> Aplicando procedimentos de cálculo de limite e análise lateral.
-
-2\. Análise dos Limites Calculados:  
-   \-\> Limite pela direita (x \-\> 2+): 4  
-   \-\> Limite pela esquerda (x \-\> 2-): 4  
-   \-\> Os limites laterais são iguais, portanto o limite existe.  
-   \-\> O limite é finito e vale: 4
-
-Resultado Final: O limite é 4\.
+    \--- Exemplo 2: Indeterminação 0/0 \---  
+    Análise do Limite de f(x) \= (x\*\*2 \- 4)/(x \- 2\) quando x \-\> 2  
+    \--------------------------------------------------  
+    1\. Substituição direta: f(2) \= nan  
+       \-\> Resultado é uma forma indeterminada (ex: 0/0, oo/oo).  
+       \-\> Aplicando procedimentos de cálculo de limite e análise lateral.
+    
+    2\. Análise dos Limites Calculados:  
+       \-\> Limite pela direita (x \-\> 2+): 4  
+       \-\> Limite pela esquerda (x \-\> 2-): 4  
+       \-\> Os limites laterais são iguais, portanto o limite existe.  
+       \-\> O limite é finito e vale: 4
+    
+    Resultado Final: O limite é 4\.
 
 ### **Exemplo 3: Limite no Infinito**
 
@@ -129,20 +129,20 @@ Resultado Final: O limite é 4\.
 
 **Saída:**
 
-\--- Exemplo 3: Limite no Infinito \---  
-Análise do Limite de f(x) \= (2\*x\*\*3 \- x)/(x\*\*3 \+ 50\) quando x \-\> oo  
-\--------------------------------------------------  
-1\. Substituição direta: f(oo) \= nan  
-   \-\> Resultado é uma forma indeterminada (ex: 0/0, oo/oo).  
-   \-\> Aplicando procedimentos de cálculo de limite e análise lateral.
-
-2\. Análise dos Limites Calculados:  
-   \-\> Limite pela direita (x \-\> oo+): 2  
-   \-\> Limite pela esquerda (x \-\> oo-): 2  
-   \-\> Os limites laterais são iguais, portanto o limite existe.  
-   \-\> O limite é finito e vale: 2
-
-Resultado Final: O limite é 2\.
+    \--- Exemplo 3: Limite no Infinito \---  
+    Análise do Limite de f(x) \= (2\*x\*\*3 \- x)/(x\*\*3 \+ 50\) quando x \-\> oo  
+    \--------------------------------------------------  
+    1\. Substituição direta: f(oo) \= nan  
+       \-\> Resultado é uma forma indeterminada (ex: 0/0, oo/oo).  
+       \-\> Aplicando procedimentos de cálculo de limite e análise lateral.
+    
+    2\. Análise dos Limites Calculados:  
+       \-\> Limite pela direita (x \-\> oo+): 2  
+       \-\> Limite pela esquerda (x \-\> oo-): 2  
+       \-\> Os limites laterais são iguais, portanto o limite existe.  
+       \-\> O limite é finito e vale: 2
+    
+    Resultado Final: O limite é 2\.
 
 ### **Exemplo 4: Limite Divergente**
 
@@ -151,20 +151,20 @@ Resultado Final: O limite é 2\.
 
 **Saída:**
 
-\--- Exemplo 4: Limite Divergente para Infinito \---  
-Análise do Limite de f(x) \= 1/x\*\*2 quando x \-\> 0  
-\--------------------------------------------------  
-1\. Substituição direta: f(0) \= zoo  
-   \-\> O resultado da substituição é infinito. Verificando a consistência do limite.  
-   \-\> Aplicando procedimentos de cálculo de limite e análise lateral.
-
-2\. Análise dos Limites Calculados:  
-   \-\> Limite pela direita (x \-\> 0+): oo  
-   \-\> Limite pela esquerda (x \-\> 0-): oo  
-   \-\> Os limites laterais são iguais, portanto o limite existe.  
-   \-\> O limite diverge para: oo
-
-Resultado Final: O limite é oo.
+    \--- Exemplo 4: Limite Divergente para Infinito \---  
+    Análise do Limite de f(x) \= 1/x\*\*2 quando x \-\> 0  
+    \--------------------------------------------------  
+    1\. Substituição direta: f(0) \= zoo  
+       \-\> O resultado da substituição é infinito. Verificando a consistência do limite.  
+       \-\> Aplicando procedimentos de cálculo de limite e análise lateral.
+    
+    2\. Análise dos Limites Calculados:  
+       \-\> Limite pela direita (x \-\> 0+): oo  
+       \-\> Limite pela esquerda (x \-\> 0-): oo  
+       \-\> Os limites laterais são iguais, portanto o limite existe.  
+       \-\> O limite diverge para: oo
+    
+    Resultado Final: O limite é oo.
 
 ### **Exemplo 5: Limite Inexistente**
 
@@ -173,19 +173,19 @@ Resultado Final: O limite é oo.
 
 **Saída:**
 
-\--- Exemplo 5: Limite Inexistente \---  
-Análise do Limite de f(x) \= 1/x quando x \-\> 0  
-\--------------------------------------------------  
-1\. Substituição direta: f(0) \= zoo  
-   \-\> O resultado da substituição é infinito. Verificando a consistência do limite.  
-   \-\> Aplicando procedimentos de cálculo de limite e análise lateral.
-
-2\. Análise dos Limites Calculados:  
-   \-\> Limite pela direita (x \-\> 0+): oo  
-   \-\> Limite pela esquerda (x \-\> 0-): \-oo  
-   \-\> Como os limites laterais são diferentes, o limite no ponto não existe.
-
-Resultado Final: O limite é Inexistente.
+    \--- Exemplo 5: Limite Inexistente \---  
+    Análise do Limite de f(x) \= 1/x quando x \-\> 0  
+    \--------------------------------------------------  
+    1\. Substituição direta: f(0) \= zoo  
+       \-\> O resultado da substituição é infinito. Verificando a consistência do limite.  
+       \-\> Aplicando procedimentos de cálculo de limite e análise lateral.
+    
+    2\. Análise dos Limites Calculados:  
+       \-\> Limite pela direita (x \-\> 0+): oo  
+       \-\> Limite pela esquerda (x \-\> 0-): \-oo  
+       \-\> Como os limites laterais são diferentes, o limite no ponto não existe.
+    
+    Resultado Final: O limite é Inexistente.
 
 ### **Exemplo 6: Limite Trigonométrico Fundamental**
 
@@ -194,20 +194,20 @@ Resultado Final: O limite é Inexistente.
 
 **Saída:**
 
-\--- Exemplo 6: Limite Trigonométrico Fundamental \---  
-Análise do Limite de f(x) \= sin(x)/x quando x \-\> 0  
-\--------------------------------------------------  
-1\. Substituição direta: f(0) \= nan  
-   \-\> Resultado é uma forma indeterminada (ex: 0/0, oo/oo).  
-   \-\> Aplicando procedimentos de cálculo de limite e análise lateral.
-
-2\. Análise dos Limites Calculados:  
-   \-\> Limite pela direita (x \-\> 0+): 1  
-   \-\> Limite pela esquerda (x \-\> 0-): 1  
-   \-\> Os limites laterais são iguais, portanto o limite existe.  
-   \-\> O limite é finito e vale: 1
-
-Resultado Final: O limite é 1\.
+    \--- Exemplo 6: Limite Trigonométrico Fundamental \---  
+    Análise do Limite de f(x) \= sin(x)/x quando x \-\> 0  
+    \--------------------------------------------------  
+    1\. Substituição direta: f(0) \= nan  
+       \-\> Resultado é uma forma indeterminada (ex: 0/0, oo/oo).  
+       \-\> Aplicando procedimentos de cálculo de limite e análise lateral.
+    
+    2\. Análise dos Limites Calculados:  
+       \-\> Limite pela direita (x \-\> 0+): 1  
+       \-\> Limite pela esquerda (x \-\> 0-): 1  
+       \-\> Os limites laterais são iguais, portanto o limite existe.  
+       \-\> O limite é finito e vale: 1
+    
+    Resultado Final: O limite é 1\.
 
 ## **4\. Conclusão**
 
